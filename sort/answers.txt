@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Dramatic difference in sorted50000 and reversed50000, but fastest when comparing sorted50000 between all sorts
+
+sort2 uses: Merge Sort
+
+How do you know?: Almost same on sorted50000 and reversed50000, but faster than sort3
+
+sort3 uses: Selection Sort
+
+How do you know?: Almost same on sorted50000 and reversed50000,but longer than sort2

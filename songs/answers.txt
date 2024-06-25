@@ -1,0 +1,7 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+If we can assume that enegry, danceability and valence has a value that can be stored between 0 and 1, using this db I can assume that "aura" could be "Purple". Energy has a mid value, while danceability is quite high.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+I think that most of these "Auras" Spotify offers doesn't make sense if we try to calculate them that way. Using current method we can assume that user listens to calm or ener music, but assuming things like
+"These listeners gravitate toward complex music to tame their fast-moving minds." or "pinks view the world with a sense of optimistic, childlike wonder" would be a speculation.
+I think in order to try calculate such things we need lyrics and some motives analysis. Sounds like ML would be a great tool for that. In theory :)
