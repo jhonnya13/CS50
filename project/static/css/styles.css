@@ -1,0 +1,87 @@
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-color: #b6d9fa;
+}
+
+#drop-area.highlight {
+    border-color: #27f55e;
+}
+
+.my-form {
+    margin-bottom: 10px;
+}
+
+
+#fileElem {
+    display: none;
+}
+
+
+.file-list {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.file-list div {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-list div:last-child {
+    border-bottom: none;
+}
+
+
+/* Custom button styles */
+.custom-btn {
+    padding: 10px;
+    background: #28a745; /* Green background */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; /* Remove default border */
+}
+
+.custom-btn:hover {
+    background: #218838; /* Darker green on hover */
+}
+
+.custom-btn.btn-outline-success {
+    background: transparent;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.custom-btn.btn-outline-success:hover {
+    background: #28a745;
+    color: white;
+}
+
+.uploaded { /* Change color in the file list */
+    color: green;
+}
+
+

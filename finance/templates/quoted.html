@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+
+
+<div class="section">
+
+    <h2>Price</h2>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Stock Name</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr>
+                <td> {{ symbol_price["symbol"] }} </td>
+                <td> {{ symbol_price["price"] | usd }} </td>
+             </tr>
+        </tbody>
+    </table>
+
+    <a href="/quote">
+        <button class="btn btn-primary">Find another one </button>
+    </a>
+</div>
+
+
+
+
+{% endblock %}

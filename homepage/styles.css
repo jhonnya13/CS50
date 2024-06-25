@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Jersey+10&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: radial-gradient(circle, rgba(1,114,153,1) 0%, rgba(2,0,36,1) 71%);
+    background-attachment: fixed;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #faf7f7; /* Old one - #aeaeae;*/
+    line-height: 1.5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-weight: 400;
+    padding-top: 150px;
+    padding-left: 23%;
+    padding-right: 23%;
+}
+
+@media (max-width: 600px) {
+    .intro {
+        font-weight: 400;
+        padding-top: 150px;
+        padding-left: 5%;
+        padding-right: 5%;/* Styles for small screens go here */
+    }
+}
+
+
+#unique{
+    color: red;
+}
+
+
+nav {
+    background-color: #333;
+    opacity: 0.5;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.upload_form{
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 50%;
+
+}
+
+button{
+    margin-top: 20px;
+    background-color: #333;
+
+}
+.btn.btn-light{
+    opacity: 0.5;
+}
+
+
+footer {
+    padding-right: 30%;
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+#formFileMultiple {
+
+    opacity: 0.5;
+}
+
+#exampleFormControlInput1{
+    opacity: 0.5;
+}
+
+#exampleFormControlTextarea1{
+    opacity: 0.5;
+}
+
+
+

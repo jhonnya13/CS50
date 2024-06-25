@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post" onsubmit="return validateForm()">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password" minlength="8" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+
+    <script>
+        function validateForm() {
+            // Get the password and confirmation values
+            var password = document.getElementsByName("password")[0].value;
+            var confirmation = document.getElementsByName("confirmation")[0].value;
+
+            // Compare them
+            if (password !== confirmation){
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            else{
+                return true;
+            }
+        }
+    </script>
+
+
+{% endblock %}

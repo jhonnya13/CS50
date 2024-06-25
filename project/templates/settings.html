@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+
+<header>
+    <h2>Settings</h2>
+</header>
+
+
+<form action="/settings" method="post" onsubmit="return validateForm()">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" name="new_password" placeholder="New Password" type="password" minlength="8" required>
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Confirm Password" type="password">
+    </div>
+    <button class="btn btn-primary" type="submit">Change Password</button>
+</form>
+
+
+<script>
+    function validateForm() {
+        // Get the password and confirmation values
+        var password = document.getElementsByName("new_password")[0].value;
+        var confirmation = document.getElementsByName("confirmation")[0].value;
+
+        // Compare them
+        if (password !== confirmation){
+            alert("Passwords do not match.");
+            return false;
+        }
+
+        else{
+            return true;
+        }
+    }
+</script>
+{% endblock %}

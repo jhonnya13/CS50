@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Project
+{% endblock %}
+
+{% block main %}
+<form id="file-form" action="/submit_project" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="project_name" value="{{ project_name }}" required placeholder="Project Name" type="text">
+    </div>
+
+    <div class="container">
+        <h1>Upload Your Videos</h1>
+        <div id="drop-area" class="drop-area">
+            <p>Drag and drop multiple .mov files here</p>
+            <input type="file" id="fileElem" multiple accept=".mov" onchange="handleFiles(this.files)">
+            <!-- <label class="btn btn-primary btn-sm" for="fileElem">Select files</label> -->
+        </div>
+        <div id="file-list" class="file-list"></div>
+        <div id="progress-container" style="display: none;">
+            <progress id="progress-bar" max="100" value="0"></progress>
+        </div>
+        <button id="upload-btn" class="btn btn-outline-success" style="margin-top: 20px; display: none;" type="button">Upload</button>
+        <button id="submitBtn" class="btn btn-primary" style=" display: none;" type="submit">Submit</button>
+
+    </div>
+</form>
+
+<!-- JavaScript for Drop area and form validation -->
+<script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+{% endblock %}

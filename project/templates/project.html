@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Project
+{% endblock %}
+
+{% block main %}
+<h1>Project: {{ project.name}}</h1>
+
+<table class="table-active table table-hover" >
+    <thead>
+        <tr>
+            <h5  style= "margin-top: 20px">Files</h5>
+        </tr>
+    </thead>
+    <tbody>
+        {% for file in files %}
+
+         <tr>
+            <td><a href="{{ url_for('project', project_name=project.project_name) }}">{{ project.project_name }}</a></td>
+            <td> {{ file.file_name }} </td>
+
+         </tr>
+         {% endfor %}
+    </tbody>
+</table>
+
+<button id="genTBtn" class="btn btn-primary" data-project-name="{{ project.name }}">Generate Thumbnails</button>
+<button id="genEBtn" class="btn btn-primary" style="margin-left: 60px" data-project-name="{{ project.name }}" >Generate Excel</button>
+
+<!-- JavaScript for Generate listeners -->
+<script src="{{ url_for('static', filename='js/generate.js') }}"></script>
+
+{% endblock %}
